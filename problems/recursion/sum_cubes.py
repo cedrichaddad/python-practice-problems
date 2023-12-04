@@ -1,4 +1,4 @@
-def sum_cubes(n):
+def sum_cubes(n, sum = 0):
     """
     Recursively calculates the sum of the first n positive cubes.
     Input:
@@ -8,7 +8,12 @@ def sum_cubes(n):
     
     This function may not use any loops or list comprehensions.
     """
-
+    if n == 0:
+        return sum
+    else:
+        sum += n**3
+        n -=1
+        sum_cubes(n,sum)
     pass
 
 
